@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size:  20px;
+    line-height: 1.5;
+}
+body{
+    background-color: gray;
+}
+#container{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    line-height: 1.5;
+    
+
+
+}
+#quoc-hieu{
+    text-align:  center;
+    font-size: 24px;
+    text-decoration: underline;
+}
+#dong-ke{
+    text-align: center;
+    font: size 100px;
+    
+}
+#ten{
+    text-align: center;
+}
+#ngay-thang{
+    text-align: right;
+    font-style: italic;
+    line-height: 2;
+    padding-right: 40px;
+}
+#cuoi-don{
+    text-align: right;
+    line-height: 4;
+    padding-right: 100px;
+}
+#ten{
+    text-align: center;
+    font-size: 30px;
+
+}
+p{
+    line-height: 2;
+
+
+}
+#loi-cam-on{
+    font-style: italic;
+    padding-left: 50px;
+}
+.bold{
+    font-weight: 600;
+}
+#kinh-gui{
+    font-size: 24px;
+
+}
+    

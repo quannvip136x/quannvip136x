@@ -1,0 +1,70 @@
+.color-icon{
+    font-size: 24px;
+    color:red;
+}.font{
+    font-family: 'Andika New Basic', sans-serif;
+    font-size:  24px;
+
+}
+.size{
+    width:  300px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    align-items: center;
+    font-size: 30px;
+
+}
+.red{
+  background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.general{
+    float: left;
+}
+.parents{
+    margin-top: 50px;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    height: 400px;
+
+}
+#flex{
+    margin-top: 30px;
+    clear: both;
+}
+h2{
+    clear: both;
+}
+
+
+.parent{
+    margin-top: 50px;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    height: 400px;
+
+}
+.left{
+    width: 60%;
+    height: 100%;
+}
+.right{
+    width: 40%;
+    height: 100%;
+}
+.size1{
+    height: 200px;
+}
+.size2{
+    height: 400px;
+}
+

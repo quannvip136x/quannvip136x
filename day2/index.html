@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học CSS</title> 
+
+  <!-- internal Css -->
+  <style>
+      p{
+          font-weight: 600; /* font-weight hien thi do dam nhat cua chu*/
+          color: brown;
+         font-size: 24px; /*thông thường thì size chữ trên web là 17px */
+        
+
+      }
+      #future{
+          font-size: 24px;
+          font-style: bold ;
+
+      }
+      .underline{
+          text-decoration: underline;
+      }
+      .uppercase{
+          text-transform: uppercase;
+      }
+  </style>
+  <!-- external css -->
+  <link rel="stylesheet" href="Style.css">
+
+
+</head>
+<body>
+    <!-- innline CSS -->
+
+    <h1><span style="color:red; background-color:yellow;" > Kiên nhẫn </span>  là yếu tố quan trọng để thành công</h1>
+    <p id="future" class="underline uppercase">
+        Tương lai khóc hay cười tùy thuộc vào độ lười của quá khứ 
+    </p>
+    <!-- id phân biệt phần tử k thể tái sử dụng class có thể tái sử dụng được  -->
+    <p id="Failure" class="underline"> 
+        Thất bại là mẹ thành công
+    </p>
+    <p class="truyen-kieu">
+        Đầu lòng hai ả Tố Nga
+        <br>
+        Thúy Kiều là chị, em là Thúy Vân
+    </p>
+    <!-- độ mạnh yếu của các thẻ -->
+    <!-- inline CSS > Internal CSS > External CSS -->
+    <!-- Inline CSS > selectir ID > selector class > Selector elemengt -->
+    
+</body>
+</html>
