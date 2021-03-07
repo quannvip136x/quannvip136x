@@ -1,0 +1,9 @@
+*{
+    text-align: center;
+}
+.container{
+    width: 30%;
+    color: blue;
+    background-color: coral;
+    text-align: center;
+}
