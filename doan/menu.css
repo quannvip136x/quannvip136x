@@ -43,6 +43,7 @@ li{
 }
 a{
     text-decoration: none;
+    color:rgb(236, 114, 161);
 }
 .sub-menu :hover{ 
  color: red;
