@@ -23,6 +23,6 @@ function toTrade(x,y){
 }
 function ToCentury(y){
     let x;
-    x= Math.floor(y/100)+1;
+    x= Math.floor((y-1)/100)+1;
     console.log("Thế kỉ thứ: "+x);
 }
