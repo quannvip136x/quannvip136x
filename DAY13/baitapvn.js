@@ -34,7 +34,7 @@ function chenso(arr) {
 
 
 function tangDan(arr) {
-    let a = arr.push('4')
+    let a = arr.push('10')
 
     for (i = 0; i < arr.length; i++) {
         for (j = i + 1; j < arr.length; j++) {
