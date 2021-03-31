@@ -1,0 +1,17 @@
+.container{
+    box-sizing: border-box;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+#lucky{
+    text-align: center;
+    background-color: rgb(172, 238, 255);
+    line-height: 1.5;
+    padding: 30px;
+}
+#guess{
+   font-weight: 600;
+   font-size: 40px;
+}

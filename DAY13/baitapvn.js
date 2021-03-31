@@ -76,7 +76,7 @@ function giaCuocTaxi() {
     if (soKm < 1) {
         giaCuoc = 9000
         console.log("Số tiền cần trả là:", giaCuoc)
-    } else if (1 < soKm && soKm < 31 && b == 0) {
+    } else if (1 < soKm && soKm < 31 && b === 0) {
         giaCuoc = (soKm * 11000) + 9000
         console.log("Số tiền cần trả là:", giaCuoc)
         console.log("Thời gian chờ là 0")
@@ -89,10 +89,12 @@ function giaCuocTaxi() {
         giaCuoc = 400 * b + (soKm * 11000) + 9000
         console.log("Số tiền cần phải trả sau khi chờ:", giaCuoc)
         console.log("Thời gian chờ là", b + " Phút")
+      
     }
-    if (soKm > 30 && b > 1) {
+    else   if (soKm > 30 && b > 1) {
         giaCuoc = 400 * b + (soKm * 11000) + 9000
         console.log("Số tiền cần phải trả sau khi chờ", giaCuoc)
         console.log("Thời gian chờ là", b + " Phút")
+
     }
 }

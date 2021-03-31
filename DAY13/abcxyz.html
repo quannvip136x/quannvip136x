@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p > so luong: <input id="values" name="amount" min="0" type="number"> </p>
+            <p>đơn vị </p>
+            <div><span>từ</span>
+                <select name="countries1" id="countries1">
+                    <!-- <option value="0">chọn quốc gia</option> -->
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                    <option value="Ringgit">Ringgit</option>
+                    <option value="RMB">Nhân dân tệ</option>
+                </select>
+            </div>
+
+            <div> <span>sang </span>
+                <select name="countries2" id="countries2">
+                    <!-- <option value="0">chọn quốc gia</option> -->
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                    <option value="Ringgit">Ringgit</option>
+                    <option value="RMB">Nhân dân tệ</option>
+                </select>
+            </div>
+            <p id="res"></p>
+
+        </div>
+        <button type="submit" value="chuyển đổi" onclick=change()>chuyển đổi</button>
+    </div>
+
+    <script src="chuyendoi.js"></script>
+</body>
+
+</html>

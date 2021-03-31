@@ -87,3 +87,51 @@ function veTamGiacCan(m) {
     document.write(str)
 }
 veTamGiacCan(4)
+
+
+document.write("<br>")
+// function veTamGiacCx(m) {
+//     document.write("<br>")
+//     if (m <= 0 || Number.isInteger(m) === false) {
+//         document.write("Nhập sai rồi dữ liệu");
+//         return;
+//     }
+//     let str = "";
+//     for (let i = 1; i <= m; i++) {
+//         str += "<br>"
+//         for (let j = 1; j < i; j++) {
+//             str += "* "
+//         }
+//         for (j = 0; j < (m * 2 - (2 * i - 1)); j++) {
+//             str += "* "
+//         }
+//     }
+
+//     for (let i = 1; i <= m; i++) {
+//         str += "<br>"
+//         for (let j = 1; j < i; j++) {
+//             str += "* ".fontcolor("white")
+//         }
+//         for (j = 0; j < (m * 2 - (2 * i - 1)); j++) {
+//             str += "* "
+//         }
+//     }
+//     str += "<br>"
+//     document.write(str)
+// }
+// veTamGiacCx(4)
+function drawRectangle(m, n) {
+    if (m <= 0 || m % 2 === 1 || n <= 0 || Number.isInteger(m) === false || Number.isInteger(n) === false) {
+        document.write("Nhập sai rồi dữ liệu");
+        return;
+    }
+    let str = "";
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < m; j++) {
+            str += "&#32;*"
+        }
+        str += "<br/>"
+    }
+    document.write(str)
+}
+drawRectangle(10, 5)
