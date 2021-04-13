@@ -9,6 +9,10 @@ body{
 .container{
     margin: 10px auto;
     width: 200px;
+    background-color: rgb(247, 108, 108);
+    margin-top: 100px;
+    border-radius: 5px;
+    
 }
 .screen{
     background-color: white;
@@ -25,6 +29,8 @@ body{
     height: 50px;
     outline: none;
     border: 0.1 solid slategrey;
+    border-radius: 10px;
+    margin: 2px;
 }
 .item:hover{
     background-color: rgb(182,182,182);
@@ -50,6 +56,7 @@ body{
     font-size: 20px;
     color: rgb(63, 63, 63);
     z-index: 222;
+    border-radius: 2px;
 
 }
 .item19{
@@ -57,4 +64,13 @@ body{
 }
 .item19:hover{
     background-color: rgb(250, 107, 107);
+}
+.pheptinh{
+    background-color: rgb(230, 182, 127);
+}
+.pheptinh:hover{
+    background-color: rgb(216, 161, 99)
+}.screen {
+    border-radius: 10px;
+    margin: 10px 0 5px 0;
 }
