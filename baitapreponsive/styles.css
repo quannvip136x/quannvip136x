@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(151, 149, 151);
+}
+.container{
+    text-align: center;
+    width: 600px;
+    background-color: rgb(115, 227, 255);
+    color: hotpink;
+    line-height: 2;
+    margin: auto;
+   
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 90, 85);
+    background-color: rgb(218, 218, 218);
+    width: 30%;
+}
