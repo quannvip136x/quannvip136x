@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.colums{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(133, 231, 255);
+}
+.logo img{
+    width: 100px;
+    height: 30px;
+}
+.logo{
+    padding: 12.5px;
+}
+.sub-menu{
+    background-color: chartreuse;
+    margin-left: auto;
+    padding: 12.5px 12.5px 12.5px 12.5px;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+
+#sub.show{
+    display: block;
+}
+     
+a{
+    text-decoration: none;
+    margin-right: 20px;
+}
+@media  (max-width: 600px){
+    #login a{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    #logo1{
+        text-align: center;
+        margin: 20px 10px 15px 10px;
+    }
+    #logo1 img{
+        display: block;
+        margin: auto;
+        width: 80px;
+        height: 20px;
+    }
+    .sub-menu{display: none;}
+    .button {
+       
+        width: 60px;
+        height: 60px;
+    }
+    a{
+        color: rgb(231, 0, 0);
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .sub-menu1{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        line-height: 2;
+    }
+    .sub-menu2 a{
+
+    }
+    .menu1{
+        width: 100%;
+        height: 60px;
+        background-color: cadetblue;
+        display: flex;
+      
+     }
+    
+}
+@media  (min-width: 601px){
+    .button{
+    display: none;
+}
+#logo1{
+    display: none;
+}
+.sub-menu {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-left: 20%;
+}
+ .menu{
+    width: 100%;
+    height: 60px;
+    background-color: cadetblue;
+   display: flex;
+   justify-content: space-between;
+ }
+ #icon {
+     display: none;
+ }
+ .sub-menu2{
+     color: rgb(34, 31, 29);
+     font-size: 17px;
+     font-weight: 600;
+ }
+
+}
+.sub-menu1{
+     background-color: rgb(241, 177, 80);
+    margin: auto;
+    text-align: center;
+    display: none;
+    
+}
+#icon {
+    margin: 15px;
+}
+
+.icon {
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+}
+#login{
+    width: 30%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
