@@ -270,7 +270,7 @@ right: -1.5%;
   background-color: #342C2C!important;
   max-width: 1440px;
   height: 93px;
-  padding: 15px 85px 15px 86px;
+ 
 }
 @media (max-width: 1280px){
   .content-card{
@@ -280,13 +280,12 @@ right: -1.5%;
     margin: auto;
     text-align: center;
 
-  }
+   }
 
 }
 
 
-
-@media (max-width: 900px){
+@media (max-width: 990px){
   .sign-up.none a{
     background-color: lightblue!important;
     color: white!important;
@@ -296,13 +295,15 @@ right: -1.5%;
     display: block;
     background-color: lightblue;
     z-index: 1000;
-    max-width: 900px;
+    padding: 30px;
+  
   }
   #navbarNav.show{
     position: static;
     display: block;
     background-color: lightblue;
     z-index: 1000;
+    padding: 20px;
    
   }
   .tips-content{
@@ -314,13 +315,10 @@ right: -1.5%;
     color: red!important;
   }
   .content-card{
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     grid-gap: 10px
   }
-  .card {
-    max-width: 100%;
-    margin: auto;
-  }
+ 
   .navbar-toggler{
     background-color: rgb(153, 197, 255);
     margin: auto 0 auto 0;
