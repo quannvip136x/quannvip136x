@@ -68,15 +68,6 @@ nav {
   margin-top: 128px;
  
 }
-.input-1{
-  max-width: 307px;
-  padding: 15px;
-}
-.input-2{
-  max-width: 142px;
-  padding:15px;
-}
-
 .hero-title,
 .hero-description {
   font-family: Poppins, Arial, sans-serif; /* Cần nhúng font vào */
@@ -85,11 +76,23 @@ nav {
   text-align: center;
   color: #ffffff;
 }
+.inpmut-1{
+  width: 307px;
+  padding: 15px;
+}
+.input-2{
+  max-width: 142px;
+  padding:15px;
+}
+
+
+
 .hero-form input,button{
   border: none;
   margin-top:17px ;
   height: 56px;
   font-size: 13px;
+  margin: 17px 1px 0px 1px;
 }
 .hero-title {
   font-weight: 600;
