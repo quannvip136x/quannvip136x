@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:  sans-serif;
+
+}
+h1{
+    text-align: center;
+    margin:15px 0;
+}
+.table{
+    border: 1px solid;
+}
+thead{
+    background-color: #333A40;
+    color: #fff;
+}
+.fa-user-plus{
+    color: rgb(247, 247, 247);
+    margin-left: 10px;
+}
+tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+.box-item{
+    width: 80%;
+    margin: auto;
+}
+.add-student{
+    background-color: rgb(58, 194, 99);
+    box-shadow: 1px 1px 1px 1px rgb(211, 203, 203);
+    border-radius: 5px;
+    max-width:100px;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+.add-student p{
+    color: white;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px;
+}
+.add-student:hover{
+    background-color: rgb(65, 146, 65);
+}
+.fix-student {
+   padding: 20px    ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-top: 20px;
+    padding-bottom: 20px; */
+}
+.delete{
+    cursor: pointer;
+}
+.delete:hover{
+   color: rgb(148, 49, 49);
+}
+.border-a{
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid rgb(124, 123, 123);
+}
+a{
+    text-decoration: none;
+}
+/* class chung */
+.fa-edit,a{
+    color: #01A4B6;
+}
+.fa-trash-alt,span{
+    color: #EA2B48;
+}
+.fa-save,.fa-angle-left{
+    color: #fff;
+}
+
+/* Thêm học viên */
+.form-add{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.form-add h1{
+    margin-top: 30px;
+}
+.form-container {
+    max-width: 900px;
+    padding: 30px;
+    margin: 30px auto 0 auto;
+    background-color: #fff;
+
+}
+
+.form__row {
+    padding: 8px 0;
+    display: flex;
+}
+
+.form__label {
+    min-width: 90px;
+    padding: 5px;
+}
+
+.form__input {
+    flex: 1;
+    height: 35px;
+    padding-left: 10px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.back:hover{
+    background-color: rgb(53, 45, 45);
+}
+.back{
+    padding: 10px;
+    margin: 5px;
+    background: rgb(104, 104, 104);
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.save{
+    padding: 10px;
+    margin: 5px;
+    background: rgb(76, 214, 76);
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+.save:hover{
+    background: rgb(52, 163, 52);
+}
+.form_item{
+    text-align: center;
+}

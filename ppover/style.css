@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    text-align: center;
+    margin: auto;
+
+}
+.btn{
+    /* margin-top: 50px; */
+}
+.popOvers p{
+    /* position: absolute; */
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    margin-left:30px ;
+   
+
+
+}
+.popOvers{
+    margin: auto;
+    max-width: 30%;
+    display: flex;
+    margin-top: 70px;
+    padding: 20px;
+}

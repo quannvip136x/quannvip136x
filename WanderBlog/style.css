@@ -29,11 +29,9 @@ header{
 }
 #header-img img{
     max-width: 100%;
-    height: 417px;
 }
 .carosel{
     background-color: white;
-    width: 133px;
     height: 48px;
     position: absolute;
     margin: 266px 747px 103px 100px;
@@ -139,11 +137,14 @@ margin-top: 11px;
    text-decoration: none;
    color: #333333;
    width: 98px;
-   height: 29px;
    font-size: 24px;
    font-weight: 550;
+
    
 
+}
+.link-content1 a:hover{
+    color :rgb(115, 134, 153)!important;
 }
 .content2-item{
     display: flex;
@@ -157,14 +158,13 @@ margin-top: 11px;
 }
 .content2 .card{
     width: 442px;
-    height: 589px;
+
     margin-top: 30px;
-    border:none;
+    border:#FFF;
    
 }
 .card img{
     max-width: 441px;
-    max-height: 441px;
 }
 
 .content2 h2{
@@ -175,7 +175,6 @@ margin-top: 11px;
     padding-left: 20px  !important;
     margin-left: 0;
     width: 120px;
-    height: 57px;
 }
 .carosel i{
     width: 40px;
@@ -193,11 +192,13 @@ margin-top: 11px;
 .content2 h5{
     font-weight: 700;
     font-size: 24px;
+    padding-top: 10px;
 
 }
 .content2 p{
     font-size: 23px;
     font-weight: 200;
+    padding-bottom: 20px;
    
 }
 .bigButton{
@@ -217,6 +218,7 @@ margin-top: 11px;
 #big-button:hover{
     background-color: #bbb!important;
     box-shadow: #bbb 5px 5px;
+
     
     
 }
@@ -234,10 +236,7 @@ a:hover{
 }
 .card{
     cursor: pointer;
-}
-.card:hover{
-    border: solid 1px lightgray;
-    box-shadow: lightgray 3px 3px;
+
 }
 
 .profile img{
@@ -357,6 +356,7 @@ footer{
         align-items: center;
         justify-content: center;
     }
+    .text-box{display: none;}
     .content2-item{
      justify-content: center;
      align-items: center; 
@@ -425,7 +425,13 @@ footer{
        color: #333333!important;
        text-align: left;
    }
+   .navbar-toggle{
+       display: none!important;
+   }
    
+
+}
+@media (max-width:700px){
 
 }
 
