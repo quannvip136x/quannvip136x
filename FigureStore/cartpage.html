@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="shortcut icon"
+        href="https://s3.cloud.cmctelecom.vn/tinhte1/2018/12/4527476_Meitu_Dragonball_TInhte_21.jpg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="giohang.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="cart-items">
+        <div class="cart-bag">
+            <h6>Giỏ hàng</h6>
+            <i onclick="hide()" class="fas fa-times"></i>
+        </div>
+
+        <p>Hiện chưa có sản phẩm nào</p>
+        <hr>
+        <div class="cart-p">
+            <p>Tổng tiền</p>
+            <p>0đ</p>
+        </div>
+
+        <div class="frame">
+            <a href="cartpage.html" >  <button class="custom-btn btn-15"> XEM GIỎ HÀNG</button></a> 
+            <a href="cartpage.html" >  <button class="custom-btn btn-15"> MUA NGAY</button></a>
+        </div>
+
+
+    </div>
+
+
+    <div class="container">
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img
+                        src="https://theme.hstatic.net/200000112489/1000589682/14/logo.png?v=204" alt="FigureStore"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-items"><a href="index.html">Home</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="nut_dropdown"> Sản phẩm</button>
+                                <div class="noidung_dropdown">
+                                    <a href="#">Anime</a>
+                                    <a href="#">Film</a>
+                                    <a href="#">Khác</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-items"><a href="#">Giới thiệu</a> </li>
+                        <li class="nav-items"><a href="#">Blog</a> </li>
+
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <div class="cart" onclick="show()">
+                            <i class="fas fa-shopping-cart show"></i>
+                            <p>(0)</p>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+        <div class="main-cart">
+            <div  style="border: solid 1px; padding: 5px;">
+            <div>
+                <h2>Giỏ hàng</h2>
+                <p>(1) Sản phẩm</p>
+            </div>
+            <div class="cart-item">
+                <img src="./img/f99d3615aa0a57540e1b_076415df65394ff1ab50b9f91beab348_master.jpg" alt="">
+                <div class="infor-cart">
+                    <div>
+                        <h5>Figure Naruto hóa cửu vĩ</h5>
+                        <div class="cart-point"><i class="fas fa-plus"></i><span>1</span><i class="fas fa-minus"></i>
+                        </div>
+                        <div style="padding-top: 10px;font-weight: 600;"> <span
+                                style="margin-top: 20px;">560,000đ</span><span style="padding-left: 5px;">x1</span>
+                        </div>
+                    </div>
+
+                    <div class="close-cart"> <i class="fas fa-times"></i></div>
+
+                </div>
+
+            </div>
+            <div class="cart-item">
+                <img src="./img/f99d3615aa0a57540e1b_076415df65394ff1ab50b9f91beab348_master.jpg" alt="">
+                <div class="infor-cart">
+                    <div>
+                        <h5>Figure Naruto hóa cửu vĩ</h5>
+                        <div class="cart-point"><i class="fas fa-plus"></i><span>1</span><i class="fas fa-minus"></i>
+                        </div>
+                        <div style="padding-top: 10px;font-weight: 600;"> <span
+                                style="margin-top: 20px;">560,000đ</span><span style="padding-left: 5px;">x1</span>
+                        </div>
+                    </div>
+
+                    <div class="close-cart"> <i class="fas fa-times"></i></div>
+
+                </div>
+
+            </div>
+            <div class="cart-item">
+                <img src="./img/f99d3615aa0a57540e1b_076415df65394ff1ab50b9f91beab348_master.jpg" alt="">
+                <div class="infor-cart">
+                    <div>
+                        <h5>Figure Naruto hóa cửu vĩ</h5>
+                        <div class="cart-point"><i class="fas fa-plus"></i><span>1</span><i class="fas fa-minus"></i>
+                        </div>
+                        <div style="padding-top: 10px;font-weight: 600;"> <span
+                                style="margin-top: 20px;">560,000đ</span><span style="padding-left: 5px;">x1</span>
+                        </div>
+                    </div>
+
+                    <div class="close-cart"> <i class="fas fa-times"></i></div>
+
+                </div>
+
+            </div>
+            <div style="text-align: right; font-size: 20px;margin-right: 10px; margin-bottom: 5px;">Tạm tính: <span
+                style="font-weight: 600;">1,650,000đ</span>
+        </div>
+        </div>
+           
+            <div class="ghichu">
+                <h2>Thông tin đơn hàng</h2>
+
+                <div class="input-cart"><span>Mã giảm giá</span><input type="text"></div>
+                <div class="input-cart"><span>Ghi chú </span><input type="text"></div>
+                <div style="text-align: right; margin-right: 30px; margin-top: 30px;" > <span><strong>Tổng
+                            tiền:</strong>1,650,000đ</span></div>
+                            <div class="frame">
+                               <a href="listproducts.html"><button style="width: 150px; margin-left: 10px; margin-bottom: 20px; margin-top: 20px;" class=" custom-btn btn-15">MUA THÊM</button></a> 
+                               <a href="thanhtoan.html"><button style="width: 150px; margin-right: 10px; margin-bottom: 20px; margin-top: 20px;" class="custom-btn btn-15">MUA NGAY</button></a> 
+                            </div>            
+            </div>
+        </div>
+        <hr>
+     
+
+        <div class="products">
+            <div class="content-products">
+                <h2>Có thể bạn thích</h2>
+                <hr class="line">
+            </div>
+
+            <div class="products-items">
+                <div class="card">
+                    <a href="infoproducts.html" target="_blank">
+                        <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                            <p class="card-text">1,250,000đ</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card ">
+                    <a href="https://quannvip136x.github.io/quannvip136x/FigureSrore/infoproducts.html" target="_blank">
+                        <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                            <p class="card-text">1,250,000đ</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card ">
+                    <a href="https://quannvip136x.github.io/quannvip136x/FigureSrore/infoproducts.html" target="_blank">
+                        <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                            <p class="card-text">1,250,000đ</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card ">
+                    <a href="https://quannvip136x.github.io/quannvip136x/FigureSrore/infoproducts.html" target="_blank">
+                        <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                            <p class="card-text">1,250,000đ</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <button class="custom-btn btn-15">Xem thêm</button>
+        </div>
+
+    </div>
+
+    <div class="feedback ">
+        <div class="content-products">
+            <h2>Feedback từ khách hàng</h2>
+            <hr class="line">
+        </div>
+        <div class="fimg">
+            <img class="hide hide-1" src="https://theme.hstatic.net/200000112489/1000589682/14/gallery_item_3.jpg?v=204"
+                alt="img-feedback">
+            <img class="hide-1" src="https://theme.hstatic.net/200000112489/1000589682/14/gallery_item_5.jpg?v=204"
+                alt="img-feedback">
+            <img src="https://theme.hstatic.net/200000112489/1000589682/14/gallery_item_2.jpg?v=204" alt="img-feedback">
+            <img src="https://theme.hstatic.net/200000112489/1000589682/14/gallery_item_6.jpg?v=204" alt="img-feedback">
+            <img src="https://product.hstatic.net/200000112489/product/aac457cecbd1368f6fc0_0c9faea4abb74f6ba6adb5979d58572e_master.jpg"
+                alt="img-feedback">
+        </div>
+    </div>
+
+    </div>
+    <hr>
+    </hr>
+
+    <footer>
+        <div class=" cart-footer hide-1 content-f ">
+            <div class="footer-link ">
+                <h3>PHÁP LÝ & CÂU HỎI</h3>
+                <ul>
+                    <li><a href="#">Tìm kiếm</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-p ">
+                <h3>THÔNG TIN LIÊN HỆ</h3>
+                <li>Địa chỉ: 371/31 Trường Trinh - Phường Thanh Xuân - Tp.Hà Nội</li>
+                <li>Điện thoại: 0976979874</li>
+                <li>Fax: 0976979874</li>
+                <li>Mail: hoangquanx98x@gmai.com</li>
+
+            </div>
+        </div>
+        <div class="footer-icon">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
