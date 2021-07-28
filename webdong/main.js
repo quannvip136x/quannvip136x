@@ -1,19 +1,29 @@
 $('.add-student').click(function () {
-    $('header').addClass("hide");
+    $('main').addClass("hide");
     $('.form-add').addClass('show');
+    $('.Apl').addClass('hide');
 });
+
 $('.back').click(function () {
-    $('.form-add').removeClass('show');
-    $('header').removeClass('hide');
-    $('header').addClass("show");
-    $('.form-edit').removeClass('show');
-    $('header').removeClass('hide');
-    $('header').addClass("show");
+    location.reload();
 });
+
+$('.back-edit').click(function () {
+    location.reload();
+});
+
+function editor() {
+    $('main').removeClass('show');
+    $('main').addClass('hide');
+    $('.form-edit').addClass('show');
+    $('.Apl').addClass('hide');
+
+}
+
 let isEmailAddress = email => {
     return /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/.test(email) || /w+([-+.]w+)*@w+([-.]w+)*.w+([-.]w+)*/.test(email);
 }
-let courseApi = 'http://localhost:3000/users';
+let courseApi = 'https://shadowboiz.herokuapp.com/users';
 function loadDocJQuery() {
     $.ajax(courseApi, {
         method: "GET"
@@ -22,20 +32,20 @@ function loadDocJQuery() {
 
         for (let i = 0; i < users.length; i++) {
             const user = users[i];
-            content += `<tr>
+            content += `<tr class="content-${user.id}">
                 <td>${user.name}</td>
                 <td>${user.birthday}</td>
                 <td>${user.email}</td>
                 <td>${user.phone} </td>
                 <td class="fix-student">
-                            <div class="edit">
+                            <div onclick=editor(${user.id}) class="edit">
                                 <i class="fas fa-edit"></i>
-                                <span onclick=editor()>Chỉnh sửa</span>
+                                <span >Chỉnh sửa</span>
                             </div>
                             <div class="border-a"></div>
-                            <div class="delete">
+                            <div class="delete" onclick=deletor(${user.id})>
                                 <i class="far fa-trash-alt"></i>
-                                <span onclick=deleteEdit(${user.id})>Xóa</span>
+                                <span>Xóa</span>
                             </div>
                         </td>
                 </tr>`;
@@ -43,95 +53,209 @@ function loadDocJQuery() {
         $("#table-users").html(content);
     });
 }
+
 $(function () {
     loadDocJQuery();
 });
+
+
 $('.save').click(function () {
     let name = $('#name').val();
     let birthday = $('#birthday').val();
     let email = $('#email').val();
     let phone = $('#phone').val();
-    // Name
-    if (_.isEmpty(name)) {
-        name = "";
-        $('#name-error').text('Vui lòng nhập họ và tên')
-    } else if (name.trim().length <= 2) {
-        name = "";
-        $('#name-error').text('Họ và tên không được nhỏ hơn 2 kí tự')
-    } else if (name.trim().length > 50) {
-        name = "";
-        $('#name-error').text('Họ và tên quá dài')
-    }
-    else {
-        $('#name-error').text('')
-    }
-    // birthday
-    if (_.isEmpty(birthday)) {
-        birthday = ""
-        $('#ngaysinh-error').text('Vui lòng nhập dữ liệu')
-    }
-    else {
-        $('#ngaysinh-error').text('')
-    }
-    // Email
-    if (_.isEmpty(email)) {
-        email = "";
-        $('#email-error').text('Vui lòng nhập Email')
-    } else if (!isEmailAddress(email)) {
-        email = "";
-        $('#email-error').text('Email không đúng')
-    }
-    else {
-        $('#email-error').text('')
-    }
-    // Phone
-    if (_.isEmpty(phone)) {
-        phone = "";
-        $('#phone-error').text('Vui lòng nhập Số điện thoại')
-    } else if (phone.trim().length > 10) {
-        phone = "";
-        $('#phone-error').text('Số điện thoại không chính xác')
-    } else if (phone.trim().length < 10) {
-        phone = "";
-        $('#phone-error').text('Số điện thoại không chính xác')
-    }
-    else {
-        $('#email-error').text('')
-    }
-   let agrs = {
-        url: courseApi, // gửi ajax đến file result.php
-        type: "POST", // chọn phương thức gửi là post
-        dataType: "text", // dữ liệu trả về dạng text
-        data: { // Danh sách các thuộc tính sẽ gửi đi
-            name: name,
-            birthday: birthday,
-            email: email,
-            phone: phone
-        },
-        success: function (result) {
-            // Sau khi gửi và kết quả trả về thành công thì gán nội dung trả về
-            // đó vào thẻ div có id = result
-            $('#table-users').html(result);
+    // let isValidate = true;
+    if (name === "" || name.length <= 2 || name.length > 50 || birthday === "" || !isEmailAddress(email) || email === "" || phone === "") {
+        if (_.isEmpty(name)) {
+            name = ""
+            $('#name-error').text('Vui lòng nhập họ và tên')
+        } else if (name.trim().length <= 2 || name.trim().length > 50) {
+            name = ""
+            $('#name-error').text('Họ và tên lớn hơn 2 và nhỏ hơn 50 kí tự')
         }
-    };
+        else {
+            $('#name-error').text("");
+        }
+        if (_.isEmpty(birthday)) {
+            birthday = ''
+            $('#birthday-error').text('Vui lòng nhập Ngày tháng năm sinh')
+        }
+        else {
+            $('#birthday-error').text("");
+        }
+        if (_.isEmpty(email)) {
+            email = ''
+            $('#email-error').text('Vui lòng nhập Email')
+        } else if (!isEmailAddress(email)) {
+            email = ''
+            $('#email-error').text('Sai Định dạng')
+        }
+        else {
+            $('#email-error').text("");
+        }
+        if (_.isEmpty(phone)) {
+            phone = ''
+            $('#phone-error').text('Vui lòng nhập Số điện thoại')
+        }
+        else {
+            $('#phone-error').text("");
+        }
 
-    // Truyền object vào để gọi ajax
-    $.ajax(agrs);
-});
-function deleteEdit(id) {
-    let formData = {
-        method: 'DELETE',
-        Headers: {
-            'Content-Type': 'application/json'
-        },
-    };
-    fetch(courseApi + '/' + id, formData)
-        .then(function (loadDocJQuery) {
-            loadDocJQuery.json();
-        })
-        .then(function () {
+    } else {
+        let agrs = {
+            url: courseApi,
+            type: "POST",
+            data: {
+                name: name,
+                birthday: birthday,
+                email: email,
+                phone: phone
+            }
+        };
+        $.ajax(agrs).done(function () {
             loadDocJQuery();
         });
+        alert("Bạn đã tạo thành công");
+        location.reload();
+        
+    }
+});
 
+function editor(id) {
+    $('main').addClass('hide');
+    $('.form-edit').addClass('show');
+    $.ajax(courseApi, {
+        method: "GET",
+    }).done(function (users) {
+        for (let i = 0; i < users.length; i++) {
+            let user = users[i]
+            if (user.id === id) {
+                $('#name-edit').val(user.name)
+                $('#birthday-edit').val(user.birthday)
+                $('#email-edit').val(user.email)
+                $('#phone-edit').val(user.phone)
+                $('.save-edit').click(function () {
+                    let name = $('#name-edit').val();
+                    let birthday = $('#birthday-edit').val();
+                    let email = $('#email-edit').val();
+                    let phone = $('#phone-edit').val();
+                    if (name === "" || name.length <= 2 || name.length > 50 || birthday === "" || !isEmailAddress(email) || email === "" || phone === "") {
+                        if (_.isEmpty(name)) {
+                            name = ""
+                            $('#name-error-edit').text('Vui lòng nhập họ và tên')
+                        } else if (name.trim().length <= 2 || name.trim().length > 50) {
+                            name = ""
+                            $('#name-error-edit').text('Họ và tên lớn hơn 2 và nhỏ hơn 50 kí tự')
+                        } else {
+                            $('#name-error-edit').text('')
+                        }
+                        if (_.isEmpty(birthday)) {
+                            birthday = ''
+                            $('#birthday-error-edit').text('Vui lòng nhập Ngày tháng năm sinh')
+                        }
+                        else {
+                            $('#birthday-error-edit').text('')
+                        }
+                        if (_.isEmpty(email)) {
+                            email = ''
+                            $('#email-error-edit').text('Vui lòng nhập Email')
+                        } else if (!isEmailAddress(email)) {
+                            email = ''
+                            $('#email-error-edit').text('Sai Định dạng')
+                        } else {
+                            $('#email-error-edit').text('')
+                        }
+                        if (_.isEmpty(phone)) {
+                            phone = ''
+                            $('#phone-error-edit').text('Vui lòng nhập Số điện thoại')
+                        } else {
+                            $('#phone-error-edit').text('')
+                        }
+
+                    } else {
+                        $.ajax({
+                            url: courseApi + '/' + id,
+                            method: 'PUT',
+                            data: {
+                                name: name,
+                                birthday: birthday,
+                                email: email,
+                                phone: phone
+                            }
+                        }).done(function (data) {
+                            console.log(data);
+                            location.reload();
+                        })
+                    }
+
+                });
+            }
+        }
+    });
 }
+
+function deletor(id) {
+    console.log(id);
+    $('.Apl').addClass('show');
+    $('.Apl').removeClass('hide');
+    $('.yes').click(function () {
+        return $.ajax({
+            url: courseApi + "/" + id,
+            method: "DELETE"
+        }).done(function () {
+            let deletid = document.querySelector('content-' + id)
+            console.log(deletid);
+            if (deletid) {
+                deletid.remove();
+            }   
+           loadDocJQuery();
+           $('.Apl').removeClass('show');
+        })
+    })
+    $('.no').click(function () {
+        $('.Apl').removeClass('show');
+    })
+}
+function search(){
+    let x = $('#search-input').val();
+    
+  $.ajax(`https://shadowboiz.herokuapp.com/users?q=${x}`,{
+      method :"GET"
+      
+  }).done(function(user) {
+      console.log(x,user);
+     let content ="";
+     for(let i=0;i< user.length     ;i++){
+        content += `<tr class="content-${user[i]}">
+            <td>${user[i].name}</td>
+            <td>${user[i].birthday}</td>
+            <td>${user[i].email}</td>
+            <td>${user[i].phone} </td>
+            <td class="fix-student">
+                        <div onclick=editor(${user[i]}) class="edit">
+                            <i class="fas fa-edit"></i>
+                            <span >Chỉnh sửa</span>
+                        </div>
+                        <div class="border-a"></div>
+                        <div class="delete" onclick=deletor(${user[i]})>
+                            <i class="far fa-trash-alt"></i>
+                            <span>Xóa</span>
+                        </div>
+                    </td>
+            </tr>`;
+        }
+        
+
+    $("#table-users").html(content);
+      
+  })
+     
+}
+$.ajax('https://shadowboiz.herokuapp.com/users?_page=1&_limit=3', {
+        method: "GET"
+    }).done(function (data, textStatus, request) {
+           
+            console.log(data, textStatus, request.getResponseHeader('x-Total-Count') )
+            console.log( Math.ceil( request.getResponseHeader('x-Total-Count') / 3 ) )
+    })
 

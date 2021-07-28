@@ -30,7 +30,7 @@ tr:nth-child(even) {
     margin: auto;
 }
 .add-student{
-    background-color: rgb(58, 194, 99);
+    background-color: rgb(86, 167, 110);
     box-shadow: 1px 1px 1px 1px rgb(211, 203, 203);
     border-radius: 5px;
     max-width:100px;
@@ -47,13 +47,14 @@ tr:nth-child(even) {
     background-color: rgb(65, 146, 65);
 }
 .fix-student {
-   padding: 20px    ;
-    display: flex;
+    display: flex;  ;
     flex-direction: row;
     justify-content: center;
-    /* margin-top: 20px;
-    padding-bottom: 20px; */
 }
+.edit{
+    cursor: pointer;
+}
+
 .delete{
     cursor: pointer;
 }
@@ -63,7 +64,7 @@ tr:nth-child(even) {
 .border-a{
     margin-left: 5px;
     margin-right: 5px;
-    border: 1px solid rgb(124, 123, 123);
+    border-top: none;
 }
 a{
     text-decoration: none;
@@ -80,10 +81,15 @@ a{
 }
 
 /* Thêm học viên */
+.form-edit{
+    display: none;
+}
 .form-add{
     display: none;
 }
-
+.Apl.show{
+    display: block!important;
+}
 .show{
     display: block;
 }
@@ -119,11 +125,12 @@ a{
 .button{
     display: flex;
     justify-content: center;
+    padding-top: 10px;
 }
 .back:hover{
     background-color: rgb(53, 45, 45);
 }
-.back{
+.back, .back-edit{
     padding: 10px;
     margin: 5px;
     background: rgb(104, 104, 104);
@@ -131,18 +138,51 @@ a{
     cursor: pointer;
     color: #fff;
 }
+/* nút lưu */
 
-.save{
+.save, .save-edit{
     padding: 10px;
     margin: 5px;
-    background: rgb(76, 214, 76);
+    background: rgb(80, 160, 77);
     border-radius: 5px;
     cursor: pointer;
     color: #fff;
 }
 .save:hover{
-    background: rgb(52, 163, 52);
+    background: rgb(46, 138, 46);
 }
 .form_item{
     text-align: center;
+}
+.form_item span{
+    align-items: left;
+   padding-bottom: 50px;
+}
+/* css phần xóa */
+.Apl{
+    background-color: rgb(255, 235, 235);
+    width: 30%;
+    text-align: center;
+    padding-top: 30px;
+    position: absolute;
+    top:0;
+    left: 35%;
+    box-shadow: 1px 1px 1px 1px rgb(166, 179, 179);
+    border-radius: 5px;
+    display: none;
+  }
+  .thongbaoDel{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .thongbaoDel p{
+    cursor: pointer;
+  }
+   .thongbaoDel :hover{
+       color: green;
+   }
+.pagging{ 
+    align-items: center;
+    justify-content: center ;
 }
