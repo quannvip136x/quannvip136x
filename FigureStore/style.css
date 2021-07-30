@@ -506,7 +506,7 @@ footer h3{
     } */
     .sale-item{ 
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 10x;
         margin-bottom: 50px;
         margin-top: 40px;
@@ -666,16 +666,16 @@ footer h3{
        grid-template-columns :1fr 1fr ;
     }
     .sale-item{ 
-        display: flex;
-        margin-bottom: 50px;
-        margin-top: 40px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr ;
         margin: auto;
+    }
+    .hide-sale-img{
+        display: none;
     }
     .card-sale img{
         max-width: 100%;
-        margin-bottom: 20px;
-        padding: 5px;
-    
     }
     footer{
         display: flex;
