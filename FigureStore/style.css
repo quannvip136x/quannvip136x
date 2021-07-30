@@ -506,7 +506,7 @@ footer h3{
     } */
     .sale-item{ 
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 10x;
         margin-bottom: 50px;
         margin-top: 40px;
