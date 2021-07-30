@@ -1,0 +1,33 @@
+window.hrfwidget = {
+    appId: '363772567412181',
+    pageId: '299038867586718',
+    widgets: [],
+    checkboxs:[],
+    customer_chats:[],
+    widgetLocale: 'vi_VN',
+    fbSDKVersion: 'v5.0'
+};
+
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = '//hstatic.net/harafunnel/widget.js?v=1.2';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'hrfwidget-core'));
+
+function confirmOptIn(id) {
+        var w = hrfwidget.widgets.filter(function(a) { return a.id == id })
+
+        if (w && w.length > 0) {
+            var x = document.getElementById(id);
+            var userRef = x.getAttribute('user_ref');
+            FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, {
+                'app_id': '363772567412181',
+                'page_id': '299038867586718',
+                'ref': w[0].ref,
+                'user_ref': userRef
+            });
+        }
+    }

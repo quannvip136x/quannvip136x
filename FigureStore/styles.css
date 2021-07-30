@@ -1,9 +1,12 @@
 .ifo-img{
     display: grid;
-    grid-template-columns: 60px 500px;
+    grid-template-columns: 60px 450px;
     grid-gap: 20px;
     margin-left: 50px;
   
+}
+h1{
+    margin: 30px;
 }
 .small-img img{
     max-width: 60px;
@@ -11,22 +14,25 @@
     display: grid;
     grid-template-columns: 60px;
    margin-bottom: 10px;
+   cursor: pointer;
 }
-.big-img {
-   max-width: 480px;
-    max-height: 480px;
+.big-img img{
+   max-width: 100%;
 }
-.info{
-    display: flex;
-}
-.t-info{
-    display: grid;
-    grid-template-columns: 500px;
 
- 
+.info{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.information-text h2{
+    margin-top: 50px;
 }
 .information-text p{
     font-size:16px;
+}
+.t-info{
+    margin-left:30px ;
 }
 .t-info span{
     font-size: 24px;
@@ -34,9 +40,11 @@
     margin-bottom: 30px;
 }
 .bnt-info {
-  justify-content: space-around;
+  justify-content: space-evenly;
+
 
 }
+
 .bnt-info .bnt-15{
     margin-right: 30px;
  
@@ -44,3 +52,83 @@
 .price{
     margin-bottom: 30px;
 }
+.cart-point{
+    font-size: 16px;
+}
+@media(max-width: 768px){
+    .info{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .information-text{
+        max-width: 100%;
+    }
+    hr{display: none;}
+    .frame{
+        max-width: 100%;
+    }
+    .t-info{
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .small-img{
+        max-width: 60px;
+    }
+    .big-img img{
+        max-width: 100%;
+        
+     }
+     .big-img{
+         max-width: 100%;
+     }
+}
+@media(max-width:415px){
+    .ifo-img{
+        width: 350px;
+    }
+    .big-img {
+        width: 250px;
+
+    }
+    .ifo-img{
+        margin-left: 5px;
+    }
+    .t-info{
+        width:  350px;
+        margin-left: 5px;
+    }
+    .hide-img{
+        display: none;
+    }
+    .t-info span{
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+}
+@media(max-width:321px){
+    
+    .ifo-img{
+        width: 250px;
+    }
+    .big-img {
+        width: 200px;
+
+    }
+    .ifo-img{
+        margin-left: 5px;
+    }
+    .t-info{
+        width:  300px;
+        margin-left: 5px;
+    }
+       .t-info span{
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+   
+}
+  

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sách sản phẩm</title>
+    <link rel="stylesheet" href="list.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,6 +15,36 @@
 </head>
 
 <body>
+    <div class="menu-ipad ">
+        <ul class="menu navbar-nav">
+        
+              <li class="nav-items"><a href="index.html">Home</a></li>
+              <li>
+                  <div class="dropdown">
+                      <button style="font-size: 16px; background-color: none;" class="nut_dropdown"> Sản phẩm</button>
+                      <div class="noidung_dropdown">
+                          <a href="listproducts.html">Anime</a>
+                          <a href="listproducts.html">Film</a>
+                          <a href="listproducts.html">Khác</a>
+                      </div>
+                  </div>
+              </li>
+  
+              <li class="nav-items" ><a href="#">Giới thiệu</a> </li>
+              <li class="nav-items"><a href="#">Blog</a> </li>
+  
+          <form style="margin-bottom: 30px;" class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              <div class="cart" onclick="show()">
+                  <i class="fas fa-shopping-cart show"></i>
+                  <p>(0)</p>
+  
+              </div>
+          </form>
+        </ul>
+          </div>  
+
     <div class="cart-items">
         <div class="cart-bag">
             <h6>Giỏ hàng</h6>
@@ -28,21 +59,22 @@
         </div>
 
         <div class="frame">
-            <a href="cartpage.html" >  <button class="custom-btn btn-15"> XEM GIỎ HÀNG</button></a>
-            <a href="cartpage.html" >  <button class="custom-btn btn-15"> MUA NGAY</button></a>
+            <a href="cartpage.html"> <button class="custom-btn btn-15"> XEM GIỎ HÀNG</button></a>
+            <a href="cartpage.html"> <button class="custom-btn btn-15"> MUA NGAY</button></a>
         </div>
 
     </div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img
+                <a class="navbar-brand" href="index.html"><img
                         src="https://theme.hstatic.net/200000112489/1000589682/14/logo.png?v=204" alt="FigureStore"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="but-bars" onclick="ShowMenu()"><i class="fas fa-bars"></i></div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-items"><a href="index.html">Home</a></li>
@@ -50,15 +82,15 @@
                             <div class="dropdown">
                                 <button class="nut_dropdown"> Sản phẩm</button>
                                 <div class="noidung_dropdown">
-                                  <a href="#">Anime</a>
-                                  <a href="#">Film</a>
-                                  <a href="#">Khác</a>
+                                    <a href="#">Anime</a>
+                                    <a href="#">Film</a>
+                                    <a href="#">Khác</a>
                                 </div>
-                              </div>
+                            </div>
                         </li>
-                        
-                        <li  class="nav-items" ><a href="#">Giới thiệu</a> </li>
-                        <li  class="nav-items" ><a href="#">Blog</a> </li>
+
+                        <li class="nav-items"><a href="#">Giới thiệu</a> </li>
+                        <li class="nav-items"><a href="#">Blog</a> </li>
 
 
                     </ul>
@@ -75,18 +107,297 @@
                 </div>
             </div>
         </nav>
-    </div>
+        <div class="list-img">
+            <img src="./img/wp5567636.jpg" alt="">
+        </div>
+
+        <div class="list-product">
+            <div class="side-bar ">
+                <div><a href="listproducts.html">Sản phẩm nổi bật</a>
+                    <hr>
+                </div>
+                <div><a href="listproducts.html">Tất cả sản phẩm</a>
+                    <hr>
+                </div>
+                <div class="check-point">
+                    <h3>Giá</h3>
+                    <ul>
+                        <li><input type="checkbox" id="1"><label for="1"> Dưới 500,000đ</label></li>
+                        <li><input type="checkbox" id="2"><label for="2"> 500,000đ - dưới 1,000,000</label></li>
+                        <li><input type="checkbox" id="3"><label for="3">  1,000,000đ - dưới 1,500,000</label></li>
+                        <li><input type="checkbox" id="4"><label for="4"> Trên 1,500,000đ</label></li>
+
+
+                    </ul>
+                </div>
+                <div class="check-point">
+                    <h3>Theo Nhóm</h3>
+                    <ul>
+                        <li><input type="checkbox"id="5"><label for="5">Anime</label></li>
+                        <li><input type="checkbox"id="6"><label for="6">Marvel</label></li>
+                        <li><input type="checkbox"id="7"><label for="7">DC</label></li>
+                        <li><input type="checkbox"id="8"><label for="8">Khác</label></li>
+
+                    </ul>
+                </div>
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+            </div>
+            <div class="product-items">
+                <div>
+                <div class="brand-pro">
+                    <h2>Tất cả sản phẩm</h2>
+                    <div>
+                        <select class="select-side">
+                            <option value="">Sản phẩm mới</option>
+                            <option value="">Sản phẩm nổi bật</option>
+                            <option value="">Sản phẩm bán chạy</option>
+                            <option value="">Từ A - Z</option>
+                            <option value="">Từ Z - A</option>
+                            <option value="">Sản phẩm giảm giá</option>
+                            <option value="">Phụ kiện</option>
+                            <option value="">Móc chìa khóa</option>
+                        </select>
+                        <hr>
+                    </div>
+                </div>
+                <div class="list-items">
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="infoproducts.html">
+                            <img src="https://product.hstatic.net/200000112489/product/z2048365808313_a9695578af4a8412caa7d4c6341da079_e57c92a864e04ff8a1c023f6b9124b8e_master.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mô hình Figure Fate/Grand Order Archer/Gilgamesh</h5>
+                                <p class="card-text">1,250,000đ</p>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div>
+                <div class="pagination1">
+                    <a href=""><i class="fas fa-angle-double-left"></i></a>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href=""><i class="fas fa-angle-double-right"></i></a>
+
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+
+
+            <div class="feedback ">
+                <div class="content-products">
+                    <h2>Feedback từ khách hàng</h2>
+                    <hr class="line">
+                </div>
+                <div class="fimg">
+                    <img src="./img/gallery_item_1.jpg" alt="img-feedback">
+                    <img src="./img/gallery_item_3.jpg" alt="img-feedback">
+                    <img src="./img/gallery_item_5.jpg" alt="img-feedback">
+                    <img src="./img/gallery_item_6.jpg" alt="img-feedback">
+                    <img src="./img/gallery_item_1 (1).jpg" alt="img-feedback">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        </hr>
+
+        <footer>
+            <div class=" cart-footer hide-1 content-f ">
+                <div class="footer-link ">
+                    <h3>PHÁP LÝ & CÂU HỎI</h3>
+                    <ul>
+                        <li><a href="#">Tìm kiếm</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-p ">
+                    <h3>THÔNG TIN LIÊN HỆ</h3>
+                    <li>Địa chỉ: 371/31 Trường Trinh - Phường Thanh Xuân - Tp.Hà Nội</li>
+                    <li>Điện thoại: 0976979874</li>
+                    <li>Fax: 0976979874</li>
+                    <li>Mail: hoangquanx98x@gmai.com</li>
+
+                </div>
+            </div>
+            <div class="footer-icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

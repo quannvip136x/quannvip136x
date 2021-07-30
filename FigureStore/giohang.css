@@ -7,7 +7,7 @@
     padding: 5px;
     border:solid 1px;
     display:  grid;
-    grid-template-columns: 130px auto;
+    grid-template-columns: 120px 1fr;
     grid-gap: 20px;
     margin-bottom: 15px;
 }
@@ -15,9 +15,10 @@
     border: solid 1px;
     max-width: 60px;
     display: grid;
-    grid-template-columns: 20px 20px 20px;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 
 }
 .cart-point span{
@@ -25,11 +26,12 @@
 }
 .infor-cart h5{
     font-weight: 600;
+    font-size: 18px;
 }
 .cart-point i,.cart-point span{
     justify-content: center;
     text-align: center;
-    font-size: 8px;
+    font-size: 12px;
 }
 .close-cart{
     font-size: 12px;
@@ -48,7 +50,7 @@
 font-size: 16px;
 text-align: center;
 border: 1px solid;
-margin: auto;
+margin: 50px auto auto auto;
 }
 .ghichu  input{
     overflow: hidden;
@@ -70,5 +72,14 @@ margin: auto;
 }
 .main-cart{
     display: grid;
-    grid-template-columns: auto 450px;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+@media(max-width:769px){
+    .cart-item{
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-cart{
+        grid-template-columns: 1fr;
+    }
 }
