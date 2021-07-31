@@ -5,6 +5,10 @@
     margin-left: 50px;
   
 }
+.show1{
+    display: flex;
+
+}
 h1{
     margin: 30px;
 }

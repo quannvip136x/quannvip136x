@@ -8,7 +8,7 @@ function hide() {
     $(".container").removeClass('opacity');
 }
 function ShowMenu() {
-    $(".menu-ipad").toggle('show');
+    $(".menu-ipad").toggle('show1');
 }
 function success() {
     alert('Cảm ơn quý khách đã mua hàng');

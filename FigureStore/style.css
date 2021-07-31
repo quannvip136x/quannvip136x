@@ -746,8 +746,8 @@ footer h3{
 @media (min-width: 768px){
 
 
-.menu-ipad .show{
-    display: block!important;
+.menu-ipad .show1{
+    display: grid!important;
 }
 
     .menu-ipad{
