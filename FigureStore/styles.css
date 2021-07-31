@@ -31,16 +31,14 @@ h1{
 .information-text p{
     font-size:16px;
 }
-.t-info{
-    margin-left:30px ;
-}
+
 .t-info span{
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 30px;
 }
 .bnt-info {
-  justify-content: space-evenly;
+  justify-content: flex-start;
 
 
 }
@@ -56,6 +54,11 @@ h1{
     font-size: 16px;
 }
 @media(max-width: 768px){
+    .bnt-info {
+        justify-content: space-evenly;
+      
+      
+      }
     .info{
         grid-template-columns: 1fr;
         width: 100%;
@@ -63,7 +66,9 @@ h1{
     .information-text{
         max-width: 100%;
     }
-    hr{display: none;}
+    .hide-hr{
+        display: none;
+    }
     .frame{
         max-width: 100%;
     }
@@ -96,7 +101,6 @@ h1{
     }
     .t-info{
         width:  350px;
-        margin-left: 5px;
     }
     .hide-img{
         display: none;
