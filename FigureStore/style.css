@@ -746,6 +746,7 @@ footer h3{
 @media (min-width: 768px){
 
 
+
 .menu-ipad .show1{
     display: grid!important;
 }
@@ -799,6 +800,7 @@ footer h3{
     
 }
 @media(max-width:415px){
+    
     .products{
         padding: 10px;
     }
@@ -812,6 +814,7 @@ footer h3{
        margin: 30px 50px 30px 50px;
     }
     #navbarSupportedContent{
+        margin-top: 10px;
         padding-left: 10px;
         z-index: 1000;
         background-color: rgb(226, 225, 225);
