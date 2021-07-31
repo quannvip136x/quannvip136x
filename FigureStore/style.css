@@ -194,8 +194,7 @@ footer a:hover{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .feedback img{
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 100%;
     margin:5px;
     margin-top:30px;
 }
@@ -405,8 +404,7 @@ footer h3{
 
 @media(min-width:1024px){
     .feedback img{
-        max-width: 200px;
-        max-height: 200px;
+     max-width: 100%;
         margin:5px;
         margin-top:30px;
     }
